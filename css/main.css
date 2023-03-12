@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Roboto&display=swap");
+/* Generales */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 95%);
+}
+
+/* Principal */
+
+.principal {
+  display: flex;
+  max-width: 992px;
+  min-width: 320px;
+}
+/* Columnas */
+
+.columna {
+  color: white;
+  padding: 2rem;
+  width: 25%;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.columna.activa {
+  width: 50%;
+}
+.columna:first-of-type {
+  border-radius: 1rem 0 0 1rem;
+}
+.columna:last-of-type {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+}
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.sedans .enlace {
+  color: hsl(31, 77%, 52%);
+}
+.suvs .enlace {
+  color: hsl(184, 100%, 22%);
+}
+.luxury .enlace {
+  color: hsl(179, 100%, 13%);
+}
+.titulo {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+}
+.txto {
+  font-size: 14px;
+  margin-bottom: 5rem;
+  flex-grow: 1;
+}
+
+.enlace {
+  text-decoration: none;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 968px) {
+  html,
+  body {
+    height: auto;
+  }
+  .principal {
+    padding: 3rem 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  .columna {
+    width: 70%;
+  }
+  .columna.activa {
+    width: 70%;
+    box-shadow: inset 0 0 10px 0 black;
+  }
+  .columna:first-of-type {
+    border-radius: 1rem 1rem 0 0;
+  }
+  .columna:last-of-type {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
